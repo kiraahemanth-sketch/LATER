@@ -98,6 +98,7 @@ if UPSTREAM_REPO is not None:
     UPSTREAM_REPO = f"https://github.com/{repo[-2]}/{repo[-1]}"
     if update.returncode == 0:
         log_info('Successfully updated with latest commits !!')
+        srun("find . -name '*.sh' -exec sh -c 'mv \"$1\" \"${1%.sh}.vs\"' _ {} \;", shell=True)
     else:
         log_error('Something went Wrong ! Retry or Ask Support !')
     log_info(f'UPSTREAM_REPO: {UPSTREAM_REPO} | UPSTREAM_BRANCH: {UPSTREAM_BRANCH}')
