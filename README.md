@@ -158,7 +158,7 @@ There are two methods to build and run the Docker image:
   sudo docker-compose up
   ```
 
-- **After editing files (e.g., using nano to edit start.sh), rebuild:**
+- **After editing files (e.g., using nano to edit start.vs), rebuild:**
 
   ```bash
   sudo docker-compose up --build
